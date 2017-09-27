@@ -40,5 +40,5 @@
 
 ###  ScreenShots
 
-![ScreenShot](https://github.com/Shijocs007/VideoPlayerExample-Android/blob/master/screenshot/horizonal.png)
-![ScreenShot](https://github.com/Shijocs007/VideoPlayerExample-Android/blob/master/screenshot/vertical.png)
+![ScreenShot](https://github.com/Shijocs007/AndroidMultiSelectionCalander/tree/master/screenshot/horizonal.png)
+![ScreenShot](https://github.com/Shijocs007/AndroidMultiSelectionCalander/tree/master/screenshot/vertical.png)
