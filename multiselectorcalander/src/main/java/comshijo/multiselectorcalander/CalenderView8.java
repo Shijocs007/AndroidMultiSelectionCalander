@@ -82,16 +82,15 @@ public class CalenderView8  extends Fragment {
 
         Calendar endDateThisCalander = Calendar.getInstance();
         endDateThisCalander.set(calendar.get(Calendar.YEAR),calendar.get(Calendar.MONTH),MultiCalendarManager.getInstance().getNumberofDaysInMonth(calendar.get(Calendar.MONTH)+1,calendar.get(Calendar.YEAR)));
-        Calendar startDateThisCalander = Calendar.getInstance();
-        startDateThisCalander.set(calendar.get(Calendar.YEAR),calendar.get(Calendar.MONTH),1);
         if(MultiCalendarManager.getInstance().getEndDate() == null){
             end_date    =   100;
         }
-        else if((endDateThisCalander.getTimeInMillis()>MultiCalendarManager.getInstance().getEndDate().getTimeInMillis()) && (startDateThisCalander.getTimeInMillis()<MultiCalendarManager.getInstance().getEndDate().getTimeInMillis())){
+        else if(endDateThisCalander.getTimeInMillis()>MultiCalendarManager.getInstance().getEndDate().getTimeInMillis()){
             end_date    =   MultiCalendarManager.getInstance().getEndDate().get(Calendar.DAY_OF_MONTH);
         }else {
             end_date = 100;
         }
+
         for (int i = calendar.getTime().getDay(), j = 1; j <= MultiCalendarManager.getInstance().getNumberofDaysInMonth(calendar.get(Calendar.MONTH)+1,calendar.get(Calendar.YEAR)); i++,j++) {
             if(i == 0){
                 i=7;
@@ -129,12 +128,10 @@ public class CalenderView8  extends Fragment {
 
             Calendar endDateThisCalander = Calendar.getInstance();
             endDateThisCalander.set(calendar.get(Calendar.YEAR),calendar.get(Calendar.MONTH),MultiCalendarManager.getInstance().getNumberofDaysInMonth(calendar.get(Calendar.MONTH)+1,calendar.get(Calendar.YEAR)));
-            Calendar startDateThisCalander = Calendar.getInstance();
-            startDateThisCalander.set(calendar.get(Calendar.YEAR),calendar.get(Calendar.MONTH),1);
             if(MultiCalendarManager.getInstance().getEndDate() == null){
                 end_date    =   100;
             }
-            else if((endDateThisCalander.getTimeInMillis()>MultiCalendarManager.getInstance().getEndDate().getTimeInMillis()) && (startDateThisCalander.getTimeInMillis()<MultiCalendarManager.getInstance().getEndDate().getTimeInMillis())){
+            else if(endDateThisCalander.getTimeInMillis()>MultiCalendarManager.getInstance().getEndDate().getTimeInMillis()){
                 end_date    =   MultiCalendarManager.getInstance().getEndDate().get(Calendar.DAY_OF_MONTH);
             }else {
                 end_date = 100;
