@@ -95,8 +95,11 @@ public class CalenderView1 extends Fragment {
         if(MultiCalendarManager.getInstance().getEndDate() == null){
              end_date    =   100;
         }
-        else if(endDateThisCalander.getTimeInMillis()>MultiCalendarManager.getInstance().getEndDate().getTimeInMillis() && startDateThisCalander.getTimeInMillis()<MultiCalendarManager.getInstance().getEndDate().getTimeInMillis()){
+        else if((endDateThisCalander.getTimeInMillis()>MultiCalendarManager.getInstance().getEndDate().getTimeInMillis()) && (startDateThisCalander.getTimeInMillis()<MultiCalendarManager.getInstance().getEndDate().getTimeInMillis())){
             end_date    =   MultiCalendarManager.getInstance().getEndDate().get(Calendar.DAY_OF_MONTH);
+        }
+        else if (startDateThisCalander.getTimeInMillis()>MultiCalendarManager.getInstance().getEndDate().getTimeInMillis()){
+            end_date = 100;
         }else {
             end_date = 100;
         }
@@ -147,8 +150,11 @@ public class CalenderView1 extends Fragment {
             if(MultiCalendarManager.getInstance().getEndDate() == null){
                 end_date    =   100;
             }
-            else if(endDateThisCalander.getTimeInMillis()>MultiCalendarManager.getInstance().getEndDate().getTimeInMillis() && startDateThisCalander.getTimeInMillis()<MultiCalendarManager.getInstance().getEndDate().getTimeInMillis()){
+            else if((endDateThisCalander.getTimeInMillis()>MultiCalendarManager.getInstance().getEndDate().getTimeInMillis()) && (startDateThisCalander.getTimeInMillis()<MultiCalendarManager.getInstance().getEndDate().getTimeInMillis())){
                 end_date    =   MultiCalendarManager.getInstance().getEndDate().get(Calendar.DAY_OF_MONTH);
+            }
+            else if (startDateThisCalander.getTimeInMillis()>MultiCalendarManager.getInstance().getEndDate().getTimeInMillis()){
+                end_date = 100;
             }else {
                 end_date = 100;
             }
