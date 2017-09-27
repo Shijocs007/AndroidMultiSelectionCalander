@@ -1,6 +1,18 @@
 ### 1. Add calenderview library in your project
 
-### 2. For Horizontal Calander add the following code
+### 2 .Implement the interface IMultiCalenderClickListener in your activity
+
+     @Override
+    public void onDateSelected(Calendar calendar) {
+    
+    }
+
+    @Override
+    public void onDateOutsideLimitClicked(Calendar calendar) {
+       
+    }
+
+### 3. For Horizontal Calander add the following code
 
           Fragment calenderView;
           calenderView   =    new CalanderHorizontalFragment();
@@ -13,7 +25,7 @@
             MultiCalendarManager.getInstance().setEndDate(endCalendar); // set the end date of calander
           
          
-### 3.For vertical calander add below code.
+### 4.For vertical calander add below code.
 
          MultiCalendarManager.getInstance().setIsVertical(true); //add this code to make vertical view
 
