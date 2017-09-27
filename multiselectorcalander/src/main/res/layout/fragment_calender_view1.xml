@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/titleLayout"
+        layout="@layout/calender_title_layout" />
+
+    <include
+        android:id="@+id/weekLayout"
+        layout="@layout/calender_week_layout" />
+
+    <LinearLayout
+        android:id="@+id/daysContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <include layout="@layout/calender_week1" />
+
+        <include layout="@layout/calender_week2" />
+
+        <include layout="@layout/calender_week3" />
+
+        <include layout="@layout/calender_week4" />
+
+        <include layout="@layout/calender_week5" />
+
+        <include layout="@layout/calender_week6" />
+    </LinearLayout>
+</LinearLayout>
